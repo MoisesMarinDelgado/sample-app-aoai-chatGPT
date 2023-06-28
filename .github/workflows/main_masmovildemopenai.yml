@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'masmovildemopenai'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CAC50AF6E01541189B9A6DDE2F234A45 }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
