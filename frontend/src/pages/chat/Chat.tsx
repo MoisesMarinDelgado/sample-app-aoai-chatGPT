@@ -158,13 +158,8 @@ const Chat = () => {
                     <div className={styles.chatContainer}>
                         {!lastQuestionRef.current ? (
                             <Stack className={styles.chatEmptyState}>
-                                <img
-                                    src={Azure}
-                                    className={styles.chatIcon}
-                                    aria-hidden="true"
-                                />
-                                <h1 className={styles.chatEmptyStateTitle}>Start chatting</h1>
-                                <h2 className={styles.chatEmptyStateSubtitle}>This chatbot is configured to answer your questions</h2>
+                                <h1 className={styles.chatEmptyStateTitle}>Empieza a chatear</h1>
+                                <h2 className={styles.chatEmptyStateSubtitle}>Puedes preguntar lo que quieras</h2>
                             </Stack>
                         ) : (
                             <div className={styles.chatMessageStream} style={{ marginBottom: isLoading ? "40px" : "0px"}} role="log">
@@ -195,7 +190,7 @@ const Chat = () => {
                                         <div className={styles.chatMessageGpt}>
                                             <Answer
                                                 answer={{
-                                                    answer: "Generating answer...",
+                                                    answer: "Generando respuesta...",
                                                     citations: []
                                                 }}
                                                 onCitationClicked={() => null}
@@ -238,7 +233,7 @@ const Chat = () => {
                             </div>
                             <QuestionInput
                                 clearOnSend
-                                placeholder="Type a new question..."
+                                placeholder="Escribe alguna pregunta..."
                                 disabled={isLoading}
                                 onSend={question => makeApiRequest(question)}
                             />
